@@ -7,8 +7,8 @@ import { PrimaryButton } from '../ui/primary_button'
 
 export const LoginForm = () => {
     return (
-        <Card className="w-3/4 h-[300px] p-10">
-            <h2 className=''>Iniciar Sesión</h2>
+        <Card className="w-5/6 h-[300px] p-5">
+            <h2 className='text-center text-lg'>Iniciar Sesión</h2>
             <form>
                 <Input type='email' placeholder='Email' />
                 <Input type='password' placeholder='Contraseña' />

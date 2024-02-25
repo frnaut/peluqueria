@@ -1,4 +1,5 @@
 import { Sidebar } from "@/components/dashboard/sidebar/sidebar";
+import { BreadCrumbs } from "@/components/ui/bread_crumbs";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -21,7 +22,10 @@ export default function RootLayout({
                     <aside className="w-1/4 h-scree">
                         <Sidebar />
                     </aside>
-                    <div className="w-3/4 h-screen bg-blue-100">{children}</div>
+                    <div className="w-3/4 h-screen bg-blue-100">
+                        <BreadCrumbs />
+                        {children}
+                    </div>
                 </main>
             </body>
         </html>

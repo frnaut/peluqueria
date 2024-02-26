@@ -37,13 +37,13 @@ export const CardCounter = ({ color, text, number, Icon }: IProp) => {
 
 
     return (
-        <Card className='w-1/5 h-[100px] flex justify-between p-3 items-center' >
-            <div className='flex flex-col justify-around'>
-                <span className={`text-[35px] font-bold ${colorClass}`}>{number}</span>
-                <span className='text-[12px] font-semibold '>{text}</span>
+        <Card className='w-1/5 h-[100px] flex justify-between p-3 items-center ' >
+            <div className='flex flex-col justify-around sm:justify-center'>
+                <span className={`sm:text-[25px] md:text-[25px] lg:text-[35px] font-bold ${colorClass}`}>{number}</span>
+                <span className='sm:text-[10px] md:md:text-[10px] lg:text-[12px] font-semibold '>{text}</span>
             </div>
-            <div>
-                <Icon className={colorClass} size={48} />
+            <div className='hidden md:block lg:block'>
+                <Icon size={30} className={`${colorClass} `} />
             </div>
         </Card>
     )

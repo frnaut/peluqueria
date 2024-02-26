@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { SidebarItems } from './sidebar_item'
+import { Building, CalendarDays, GanttChartSquare, Home, Receipt, Settings, SquareUserRound, Users } from 'lucide-react'
 
 export const Sidebar = () => {
     return (
@@ -22,12 +23,14 @@ export const Sidebar = () => {
             </div>
             <hr />
             <div className='h-5/6 p-1 flex flex-col'>
-                <SidebarItems text='Inicio' url='/dashboard' />
-                <SidebarItems text='Citas' url='/dashboard/appoiments' />
-                <SidebarItems text='Staff' url='/dashboard/staff' />
-                <SidebarItems text='Establechimientos' url='/dashboard/establishments' />
-                <SidebarItems text='Usuarios' url='/dashboard/users' />
-                <SidebarItems text='Configuración' url='/dashboard/settings' />
+                <SidebarItems text='Inicio' url='/dashboard' Icon={Home} />
+                <SidebarItems text='Citas' url='/dashboard/appoiments' Icon={CalendarDays} />
+                <SidebarItems text='Ordenes' url='/dashboard/orders' Icon={Receipt} />
+                <SidebarItems text='Servicios' url='/dashboard/services' Icon={GanttChartSquare} />
+                <SidebarItems text='Staff' url='/dashboard/staff' Icon={Users} />
+                <SidebarItems text='Establechimientos' url='/dashboard/establishments' Icon={Building} />
+                <SidebarItems text='Usuarios' url='/dashboard/users' Icon={SquareUserRound} />
+                <SidebarItems text='Configuración' url='/dashboard/settings' Icon={Settings} />
 
             </div>
 

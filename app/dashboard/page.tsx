@@ -21,7 +21,7 @@ export default function Page() {
                     </Card>
                 </div>
                 <div className='w-2/6'>
-                    <Card className=''>
+                    <Card className=' '>
                         <h2 className='font-bold text-center mt-2'>Servicios más solicitados</h2>
                         <TopServicesTable />
                     </Card>

@@ -23,7 +23,7 @@ export default function RootLayout({
                     <aside className="w-1/4 h-scree">
                         <SidebarContainer />
                     </aside>
-                    <div className="w-3/4 h-screen bg-blue-100">
+                    <div className="w-3/4 h-screen bg-blue-100 overflow-auto">
                         <BreadCrumbs />
                         {children}
                     </div>

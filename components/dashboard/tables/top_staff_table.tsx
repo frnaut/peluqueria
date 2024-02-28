@@ -60,7 +60,7 @@ export const TopStaffTable = () => {
     return (
         <div className='w-full'>
             <Table>
-                <TableHeader className='bg-[#6900fdcb] '>
+                <TableHeader className='bg-[#6900fdcb] rounded-tr overflow-hidden'>
                     {table.getHeaderGroups().map((headerGroup) => (
                         <TableRow key={headerGroup.id}>
                             {headerGroup.headers.map((header) => {

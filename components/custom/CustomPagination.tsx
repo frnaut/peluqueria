@@ -10,22 +10,49 @@ import {
 } from "@/components/ui/pagination"
 import { useState } from "react"
 
-export function CustomPagination() {
+interface IProp{
+    totalPages:number;
+    onChange:(value:number)=>void
+}
+
+export function CustomPagination({ totalPages, onChange }:IProp) {
 
     const [currentPage, setcurrentPage] = useState<number>(1)
     const [totalPage, settotalPage] = useState<number>(5)
 
     const handleOnPrevious = () => {
-        if (currentPage > 0)
+        if (currentPage > 0){
             setcurrentPage(currentPage - 1)
+            onChange(currentPage - 1)
+        }
+            
     }
 
     const handleOnNext = () => {
         setcurrentPage(currentPage + 1)
+        onChange(currentPage + 1)
+        
     }
 
     const handleChange = (value: number) => {
         setcurrentPage(value)
+        onChange(value)
+
+    }
+
+    const renderNumber = (total:number) =>{
+        const components:any[] =[]
+        for (let i = 1; i <= total; i++) {
+            components.push(
+              <PaginationItem onClick={()=>{handleChange(i)}}>
+                <PaginationLink href="#">{i}</PaginationLink>
+              </PaginationItem>
+            );   
+        }
+
+        return <>
+        {components.map(component => component)}
+        </>
     }
 
     return (
@@ -35,16 +62,8 @@ export function CustomPagination() {
                     <PaginationPrevious onClick={handleOnPrevious} href="#" />
                 </PaginationItem>
                 {
-                    totalPage < 4 ?
-                        <>
-
-                        </>
-                        : <></>
+                    renderNumber(totalPage)
                 }
-
-                <PaginationItem>
-                    <PaginationEllipsis />
-                </PaginationItem>
                 <PaginationItem>
                     <PaginationNext onClick={handleOnNext} href="#" />
                 </PaginationItem>
@@ -54,6 +73,3 @@ export function CustomPagination() {
 }
 //TODO: configurar paginacion de la tabla
 
-// <PaginationItem>
-//                     <PaginationLink href="#">1</PaginationLink>
-//                 </PaginationItem>

@@ -17,9 +17,11 @@ interface IProp {
     onSearch: () => void
     onChangeSearch: (value: string) => void
     onDateRangeChange: (value: any) => void
+    totalPages:number
+    onChangePagination: (value:number)=>void
 }
 
-export const CustomTable = ({ data, columns, onChangeSearch, onDateRangeChange, onSearch }: IProp) => {
+export const CustomTable = ({ data, columns, onChangeSearch, onDateRangeChange, onSearch, totalPages, onChangePagination }: IProp) => {
 
 
     const table = useReactTable({
@@ -99,7 +101,7 @@ export const CustomTable = ({ data, columns, onChangeSearch, onDateRangeChange, 
             </div>
 
             <div className='mt-5 '>
-                <CustomPagination />
+                <CustomPagination totalPages={totalPages} onChange={onChangePagination}/>
             </div>
         </Card>
     )

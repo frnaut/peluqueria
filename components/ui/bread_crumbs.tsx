@@ -1,4 +1,5 @@
 "use client"
+import { generateGuid } from '@/lib/utils'
 import { Bell } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
@@ -22,7 +23,7 @@ export const BreadCrumbs = () => {
             <div>
                 {
                     paths.map(pa => {
-                        return <span className='capitalize font-semibold text-[20px]'>{pa} / </span>
+                        return <span key={generateGuid()} className='capitalize font-semibold text-[20px]'>{pa} / </span>
                     })
                 }
             </div>

@@ -17,6 +17,7 @@ export const Sidebar = () => {
                     alt='logo'
                 />
                 <div className='flex flex-col'>
+                    
                     <span className='text-lg text-primary font-medium'>Juana Perez</span>
                     <span className='text-sm text-gray-400'>Administrador</span>
                 </div>

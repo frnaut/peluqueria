@@ -1,7 +1,7 @@
 
 'use client'
 import React from 'react'
-import { CardCounter } from '../ui/card_counter'
+import { CardCounter } from '../../ui/card_counter'
 import { CalendarDays } from 'lucide-react'
 
 export const CardsContainer = () => {

@@ -8,6 +8,7 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from "@/components/ui/pagination"
+import { generateGuid } from "@/lib/utils";
 import { useState } from "react"
 
 interface IProp{
@@ -44,7 +45,7 @@ export function CustomPagination({ totalPages, onChange }:IProp) {
         const components:any[] =[]
         for (let i = 1; i <= total; i++) {
             components.push(
-              <PaginationItem onClick={()=>{handleChange(i)}}>
+              <PaginationItem key={generateGuid()} onClick={()=>{handleChange(i)}}>
                 <PaginationLink href="#">{i}</PaginationLink>
               </PaginationItem>
             );   

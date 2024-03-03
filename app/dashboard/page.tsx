@@ -1,8 +1,8 @@
 
-import { CardsContainer } from '@/components/dashboard/cards_container'
-import { CustomBarChart } from '@/components/dashboard/charts/bar_chart'
-import { TopServicesTable } from '@/components/dashboard/tables/top_services_table'
-import { TopStaffTable } from '@/components/dashboard/tables/top_staff_table'
+import { CardsContainer } from '@/components/modules/dashboard/cards_container'
+import { CustomBarChart } from '@/components/modules/dashboard/charts/bar_chart'
+import { TopServicesTable } from '@/components/modules/dashboard/tables/top_services_table'
+import { TopStaffTable } from '@/components/modules/dashboard/tables/top_staff_table'
 import { Card } from '@/components/ui/card'
 import React from 'react'
 

@@ -19,9 +19,10 @@ interface IProp {
     onDateRangeChange: (value: any) => void
     totalPages:number
     onChangePagination: (value:number)=>void
+    title?:string
 }
 
-export const CustomTable = ({ data, columns, onChangeSearch, onDateRangeChange, onSearch, totalPages, onChangePagination }: IProp) => {
+export const CustomTable = ({ data, columns, onChangeSearch, onDateRangeChange, onSearch, totalPages, onChangePagination, title }: IProp) => {
 
 
     const table = useReactTable({
@@ -32,7 +33,7 @@ export const CustomTable = ({ data, columns, onChangeSearch, onDateRangeChange, 
 
     return (
         <Card className='p-5'>
-            <h1 className='text-primary font-bold text-2xl'>Listado de citas</h1>
+            <h1 className='text-primary font-bold text-2xl'>{title}</h1>
 
             <div className='flex justify-between mt-2'>
                 <div className='w-1/3'>

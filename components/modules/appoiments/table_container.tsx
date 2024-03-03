@@ -1,8 +1,10 @@
 'use client'
 import { ColumnDef } from '@tanstack/react-table';
 import React from 'react'
-import { CustomTable } from '../custom/CustomTable';
 import { Eye, Pencil, Trash } from 'lucide-react';
+import { CustomTable } from '@/components/custom/CustomTable';
+import { IconButton } from '@/components/ui/icon_button';
+
 
 
 export type AppoimentType = {
@@ -55,9 +57,9 @@ const columns: ColumnDef<AppoimentType>[] = [
         accessorKey: 'actions',
         cell: ({ row }) => {
             return <div className='flex'>
-                <Eye className='hover:text-primary cursor-pointer' />
-                <Pencil className='hover:text-primary cursor-pointer' />
-                <Trash className='hover:text-primary cursor-pointer' />
+                <IconButton Icon={Eye} iconClass='hover:text-primary cursor-pointer' onClick={()=>{}}/>
+                <IconButton Icon={Pencil} iconClass='hover:text-primary cursor-pointer' onClick={()=>{}}/>
+                <IconButton Icon={Trash} iconClass='hover:text-primary cursor-pointer' onClick={()=>{}}/>
             </div>
         },
         enableSorting: false,
@@ -93,7 +95,8 @@ export const TableContainer = () => {
 
     return (
         <>
-            <CustomTable
+            <CustomTable title='Listado de citas'
+            onChangePagination={(value:number)=>{console.log(value)}} totalPages={5} 
                 columns={columns} data={data} onChangeSearch={handleOnChangeSearch}
                 onDateRangeChange={handleOnDateRangeChange} onSearch={handleOnSearch}
             />

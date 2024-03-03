@@ -1,5 +1,5 @@
-import { CardsContainer } from '@/components/appoiments/card_container'
-import { TableContainer } from '@/components/appoiments/table_container'
+import { CardsContainer } from '@/components/modules/appoiments/card_container'
+import { TableContainer } from '@/components/modules/appoiments/table_container'
 
 import React from 'react'
 

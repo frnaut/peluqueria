@@ -8,9 +8,10 @@ interface IProp {
     color: 'red' | 'green' | 'yellow' | 'blue';
     number: string;
     Icon: LucideIcon
+    className?:string
 }
 
-export const CardCounter = ({ color, text, number, Icon }: IProp) => {
+export const CardCounter = ({ color, text, number, Icon, className }: IProp) => {
 
     const [colorClass, setcolorClass] = useState('');
     useEffect(() => {
@@ -37,7 +38,7 @@ export const CardCounter = ({ color, text, number, Icon }: IProp) => {
 
 
     return (
-        <Card className='w-1/5 h-[100px] flex justify-between p-3 items-center ' >
+        <Card className={'w-1/5 h-[100px] flex justify-between p-3 items-center ' + className} >
             <div className='flex flex-col justify-around sm:justify-center'>
                 <span className={`sm:text-[25px] md:text-[25px] lg:text-[35px] font-bold ${colorClass}`}>{number}</span>
                 <span className='sm:text-[10px] md:md:text-[10px] lg:text-[12px] font-semibold '>{text}</span>

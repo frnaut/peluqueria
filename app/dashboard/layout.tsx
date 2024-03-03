@@ -1,5 +1,5 @@
 
-import SidebarContainer from "@/components/dashboard/sidebar/sidebar_container";
+import SidebarContainer from "@/components/modules/dashboard/sidebar/sidebar_container";
 import { BreadCrumbs } from "@/components/ui/bread_crumbs";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
